@@ -22,8 +22,8 @@ public class UserController {
         return new ResponseEntity<>(userService.deleteUser(userid), HttpStatus.OK);
     }
 
-    @PostMapping("/user/balance")
-    public ResponseEntity<User> updateWallet(@RequestBody WalletTransaction walletTransaction){
+    @PostMapping("/user/updatewallet")
+    public ResponseEntity<PaymentStatus> updateWallet(@RequestBody WalletTransaction walletTransaction){
         return new ResponseEntity<>(userService.updateBalance(walletTransaction), HttpStatus.OK);
     }
 
